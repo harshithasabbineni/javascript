@@ -1,0 +1,31 @@
+<!--Update order in radio button-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+   <p>How would you like your cofee</p>
+   <form>
+    <input type="radio" name="cofee" value="cream" onchange="updateOrder()">With Cream<br>
+    <input type="radio" name="cofee" value="sugar" onchange="updateOrder()">With Sugar<br>
+    <input type="text" id="tb" size="50">
+   </form>
+   <script>
+    function updateOrder(){
+      var x=document.getElementsByName('cofee');
+      var y=Array.from(x).find(radio=>radio.checked);
+      if(y)
+      {
+        var z=y.value;
+        document.getElementById('tb').value="you ordered cofee with"+z;
+      }
+      else{
+        document.getElementById('z').value="";
+      }
+    }
+   </script>
+</body>
+</html>

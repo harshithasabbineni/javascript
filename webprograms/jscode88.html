@@ -1,0 +1,25 @@
+<!--Auto redirecting a page-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body onload="redirect()">
+    <h2>redirect a webpage after 5 seconds</h2>
+    <p id="result"></p>
+    <script>
+      function redirect()
+      {
+        var interval=setInterval(myurl,5000);
+        var result=document.getElementById("result");
+        result.innerHTML="<b>the page will redirect after delay of 5 seconds setInterval() method";
+      }
+      function myurl()
+      {
+        document.location.href="https://www.google.com";
+      }
+    </script>
+</body>
+</html>
